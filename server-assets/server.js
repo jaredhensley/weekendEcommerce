@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 
 var cartCtrl = require('./controllers/cartCtrl');
 var productCtrl = require('./controllers/productCtrl');
+var userCtrl = require('./controllers/userCtrl');
 
 var port = 8080;
 var app = express();
@@ -30,3 +31,7 @@ app.delete('/products/:id', productCtrl.removeProduct);
 
 app.post('/cart', cartCtrl.addCart);
 app.put('/cart/:id', cartCtrl.addItem);
+app.put('/cart/:id/:productId', cartCtrl.removeItem);
+
+app.post('/users', userCtrl.addUser);
+app.get('/users/:username', userCtrl.getUser);

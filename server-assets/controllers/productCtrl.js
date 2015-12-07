@@ -31,7 +31,6 @@ module.exports = {
         res.status(200).send(product);
       }
     });
-
   },
 
   updateProduct: function (req, res) {
@@ -46,7 +45,6 @@ module.exports = {
           res.status(200).send(results);
         }
       });
-
   },
 
   removeProduct: function (req, res) {

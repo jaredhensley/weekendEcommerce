@@ -14,8 +14,6 @@ var Cart = mongoose.model('Cart', new mongoose.Schema({
     type: Number,
     default: 0
   }
-
-
 }));
 
 module.exports = Cart;
